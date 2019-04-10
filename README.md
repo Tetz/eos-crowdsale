@@ -1,2 +1,4 @@
-This is a test repo.
-I just try smart contracts on EOS.
+#EOS Crowdsale Contract
+
+## Requirements
+eosio.cdt 1.6.x

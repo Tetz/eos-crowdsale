@@ -1,22 +1,70 @@
-#include <eosiolib/eosio.hpp>
+#include <crowdsale.hpp>
+ACTION crowdsale::hi( name nm ) {
+  print_f("Name : %\n", nm);
+}
 
-using namespace eosio;
+// TODO main();
+ACTION crowdsale::main( name nm ) {
+  print_f("Name : %\n", nm);
+}
 
-class [[eosio::contract("crowdsale")]] crowdsale : public contract {
- public:
-  using contract::contract;
+// TODO transfer();
+ACTION crowdsale::transfer( name nm ) {
+  print_f("Name : %\n", nm);
+}
 
-  [[eosio::action]]
-    void init( name user ) {
-    print( "Crowdsale, ", user);
-  }
+// TODO init();
+ACTION crowdsale::init( name nm ) {
+  print_f("Name : %\n", nm);
+}
 
-  [[eosio::action]]
-    void check( name user ) {
-    print( "Check, ", user);
-  }
+// TODO setstart();
+ACTION crowdsale::setstart( name nm ) {
+  print_f("Name : %\n", nm);
+}
 
-};
+// TODO setfinish();
+ACTION crowdsale::setfinish( name nm ) {
+  print_f("Name : %\n", nm);
+}
 
-EOSIO_DISPATCH( crowdsale, (init)(check) )
+// TODO white();
+ACTION crowdsale::white( name nm ) {
+  print_f("Name : %\n", nm);
+}
 
+// TODO unwhite();
+ACTION crowdsale::unwhite( name nm ) {
+  print_f("Name : %\n", nm);
+}
+
+// TODO whitemany();
+ACTION crowdsale::whitemany( name nm ) {
+  print_f("Name : %\n", nm);
+}
+
+// TODO unwhitemany();
+ACTION crowdsale::unwhitemany( name nm ) {
+  print_f("Name : %\n", nm);
+}
+
+// TODO finalize();
+ACTION crowdsale::finalize( name nm ) {
+  print_f("Name : %\n", nm);
+}
+
+// TODO withdraw();
+ACTION crowdsale::withdraw( name nm ) {
+  print_f("Name : %\n", nm);
+}
+
+// TODO refund();
+ACTION crowdsale::refund( name nm ) {
+  print_f("Name : %\n", nm);
+}
+
+// FIXME
+ACTION crowdsale::check( name nm ) {
+  print_f("Name : %\n", nm);
+  eosio::check(nm == "crowdsale"_n, "check name not equal to `crowdsale`");
+}
